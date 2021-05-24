@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="container">
+      <form class="result" name="calc">
+        <input class="value" type="text" name="txt" id="">
+     
+      <div class="row">
+          <div class="clear" onclick="calc.txt.value= ''">C</div>
+          <div class="button buttons " onclick="document.calc.txt.value+='/'">/</div>
+          <div class="button buttons" onclick="document.calc.txt.value+='*'">*</div>
+      </div>
+      <div class="row">
+        <div class="buttons"onclick="document.calc.txt.value+='7'">7</div>
+        <div class="buttons"onclick="document.calc.txt.value+='8'">8</div>
+        <div class="buttons"onclick="document.calc.txt.value+='9'">9</div>
+        <div class="buttons"onclick="document.calc.txt.value+='-'">-</div>
+      </div>
+      <div class="row">
+        <div class="buttons"onclick="document.calc.txt.value+='4'">4</div>
+        <div class="buttons"onclick="document.calc.txt.value+='5'">5</div>
+        <div class="buttons"onclick="document.calc.txt.value+='6'">6</div>
+        <div class="buttons plus" onclick="document.calc.txt.value+='+'">+</div>
+      </div>
+      <div class="row">
+        <div class="buttons" onclick="document.calc.txt.value+='1'">1</div>
+        <div class="buttons" onclick="document.calc.txt.value+='2'">2</div>
+        <div class="buttons"onclick="document.calc.txt.value+='3'">3</div>
+       
+       
+      </div>
+      <div class="row">
+        <div class="buttons"onclick="document.calc.txt.value+='0'">0</div>
+        <div class="buttons"onclick="document.calc.txt.value+='00'">00</div>
+        <div class="buttons"onclick="document.calc.txt.value+='.'">.</div>
+        <div class="buttons equal"onclick="document.calc.txt.value=eval(calc.txt.value)">=</div>
+       
+       
+      </div>
+    </div>
+  </form>
+   <script>
+       var answer;
+       document.getElementsByClassName("buttons").onclick=
+       function onClickbutton(value){
+           answer+=value
+       }
+   </script> 
+</body>
+</html>
